@@ -1,4 +1,4 @@
-# Guessthenumber
+# Guess the number and Enjoy 
 
 This game or a program made by python 3.6 
 
