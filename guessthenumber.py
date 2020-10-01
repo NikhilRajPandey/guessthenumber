@@ -1,39 +1,34 @@
-n = 18
+#this is the same code but its simplified and its easy for other coders to read 
+#you have used a lot of elif which is reduced
 
-print("\t \t \t \t Guessing Game \n")
+n=18
+attempts=1
 
-no_guess = 0
-no_try = 5
+while (attempts<=9):
 
-print("You have 5 chances \n")
+    inp=int(input("Enter your number\n"))
 
+    if inp>n:
 
-while(no_guess < no_try):
-
-    Guess = int(input("Guess the no:"))
+         print("Enter a lesser number\n")
 
 
-    if Guess == n:
-        print("You won this game in the" , no_guess + 1,"chance" )
-        break
+    elif inp<n:
 
-    if Guess > 30:
-        print("Write the number smaller than 30 \n")
+         print("Enter a greater number\n")
 
-    elif(Guess <= 10):
-        print("Increase your number")
-
-    elif(Guess >= 19):
-        print("Decrease your number")
-
-    elif (Guess >= 10 and Guess < n) :
-        print("Little increase your number")
 
     else:
-        print("Your number is decimal or a negative integer ")
+         print("you win")
+         print("you finished the game in",attempts,"attempts" )
+         break
 
+    print(9 - attempts, "no. of guesses left")
+    attempts = attempts + 1
 
-    print("Guess:",no_guess + 1,"\n")
+    if attempts>9:
+        print("game over")
 
-    no_guess = no_guess + 1
+    if attempts==9:
+        print("Hint : Number is between 15 to 20")
 
